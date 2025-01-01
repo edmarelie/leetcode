@@ -26,7 +26,11 @@ class Solution:
         # nums1: mid value (i) = (l+r) // 2
         # nums2: mid value (j) = half - i - 2
         # We need to compare value of:
-        # - A[i] 
+        # - A[i] has to be less than B[j+1]
+        # - B[j] has to be less than A[i]
+        # Else:
+        # - If B[j] > A[i+1] -> shift l=i+1
+        # - If A[i] > B[j+1] -> shift r=i-1
         l, r = 0, len(A)-1
 
         while True:
