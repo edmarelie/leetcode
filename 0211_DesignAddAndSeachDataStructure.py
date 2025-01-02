@@ -30,11 +30,12 @@ class WordDictionary:
         def dfs(index, node):
             cur = node
 
-            # Traverse each branch until it match
+            # Search for each character
             for i in range(index, len(word)):
                 c = word[i]
                 # Handles "."
                 if c == '.':
+                    # Traverse for each branch of the children
                     for child in cur.children.values():
                         if dfs(i+1, child):
                             return True
