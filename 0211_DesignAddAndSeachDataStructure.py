@@ -9,8 +9,9 @@ class WordDictionary:
     1. Use TrieNode
     2. For __init__ - initialize the Tries data structure
     3. For addWord - add each word to the Tries data structure
-    4. For seach:
+    4. For search:
        - need to handle "." that can be matched with any letter
+       - use DFS to traverse each branch
     '''
     def __init__(self):
         self.root = TrieNode()
