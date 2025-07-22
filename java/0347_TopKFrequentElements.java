@@ -10,8 +10,8 @@ class Solution {
         PriorityQueue<int[]> heap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
 
         // Iterate through HashMap
-        for (int num : count.keySet()) {
-            heap.offer(new int[]{count.get(num), num});
+        for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
+            heap.offer(new int[] {entry.getValue(), entry.getKey()});
             if (heap.size() > k) {
                 heap.poll();
             }
